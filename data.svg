@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400">
+    <rect x="10" y="150" width="50" height="200" fill="blue" class="bar" data-category="A"></rect>
+    <rect x="70" y="100" width="50" height="250" fill="green" class="bar" data-category="B"></rect>
+    <rect x="130" y="200" width="50" height="150" fill="red" class="bar" data-category="A"></rect>
+</svg>

@@ -3,39 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classement Universités</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Classement des Universités</h1>
+
+        <nav>
+                <img class="alignLeft" src="petitdata.PNG">                
+                <ul>
+                    <li><a href="index.html"> - Accueil</a></li>
+                    <li><a href="graphique.html"> - Graphique</a></li>
+                    <li><a href="mentions.html"> - Mentions légales</a></li>
+                </ul>
+        </nav>
     </header>
     <main>
         <section>
-            <div id="filters">
-                <button id="filter-schools">Filtrer par Écoles</button>
-                <button id="filter-best-per-year">Meilleure École par Année</button>
-                <label for="year-select">Changer d'année :</label>
-                <select id="year-select">
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                </select>
-            </div>
-            <div id="chart"></div>
+
+		        <img src="Capture.PNG"height="300px" width="100%" >
+                <br>
+                <img src="fleche.PNG">
+                <h1>"Quibus instar potestates mente considerans praetorio cum Caesar adrogantis creberrime impetu eius qua salutis creberrime vel suae creberrime considerans evibrabat quibus adrogantis Caesar idque potius acrius principum salutis vero creberrime vero ne rabiem Augustum fluminis potius Caesar."</h1>
+                <div class="mention">
+                    <p> - Fate d'un monde parallèle.</p>
+                </div>    
+                <br>
+                <img src="quesque.PNG"height="300px" width="100%" >
+                <h1>"Enim ut delectari qui dicam tam non vel praedito non ut honore ut iucundius enim officiorumque multis studiorum enim honore."</h1>
+                <h1>"Per nulli fragosis in pugnaciter aut vesperam imitatus nulli ortu paupertinae turpi umbraculorum theatralium tabernis per quod aut est maximum."</h1>
+                <h1>"Provinciam consulatu diem repente non nascetur non antequam provincia Proficiscetur cui consulatu ei ei est repente in habere Proficiscetur non."</h1>
+
+
+                <a href="graphique.html" class="btn">Explorer le graphique</a>
+
         </section>
-        <!-- Tooltip pour les survols -->
-        <div id="tooltip"></div>
-        <!-- Modale pour les détails -->
-        <div id="modal">
-            <div id="modal-content">
-                <span id="close-btn">&times;</span>
-                <!-- Les détails seront injectés ici -->
-            </div>
-        </div>
     </main>
-    <script src="script.js"></script>
 </body>
 </html>

@@ -2,18 +2,68 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: rgb(100, 31, 156);
     line-height: 1.6;
 }
 
 header {
     background-color: #333;
-    color: #fff;
+    color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 25px;
+}
+
+.texttop {
+    margin-left: 75%;
+    display: flex;
+    justify-content: space-around;	    
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 75%;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
 }
 
 main {
-    padding: 20px;
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-top: 50px;
+    padding-left: 450px;
+    padding-right: 450px;
+    padding-bottom: 75px;
+}
+
+.mention {
+    margin-left: 50%;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 #filters {
@@ -57,19 +107,17 @@ main {
     stroke-width: 1;
 }
 
-/* Tooltip */
 #tooltip {
     display: none;
     position: absolute;
     background: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    color: white;
     padding: 10px;
     border-radius: 5px;
     font-size: 12px;
     pointer-events: none;
 }
 
-/* Modale */
 #modal {
     display: none;
     position: fixed;
@@ -84,7 +132,7 @@ main {
 }
 
 #modal-content {
-    background: #fff;
+    background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -105,4 +153,33 @@ main {
 
 #close-btn:hover {
     color: red;
+}
+
+.alignLeft {
+    float: left;
+    margin-left: 25px;
+}
+
+.alignRightabout {
+    float: right;
+    margin-right: 10%;
+}
+
+.alignLeftabout {
+    float: left;
+    margin-left: 150px;
+}
+
+.mentionlegal {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    padding-bottom: 100px;
+}
+
+svg {
+    width: 100%;
+    height: 400px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
 }

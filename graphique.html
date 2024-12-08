@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphique Interactif</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="graphique.html">Graphique</a></li>
-                <li><a href="mentions.html">Mentions légales</a></li>
-            </ul>
-        </nav>
+        <h1>Classement des Universités</h1>
     </header>
     <main>
         <section>
-            <h2>Graphique Interactif</h2>
-            <div id="controls">
-                <button id="filter1">Filtre 1</button>
-                <button id="filter2">Filtre 2</button>
-                <button id="reset">Réinitialiser</button>
+            <div id="filters">
+                <button id="filter-schools">Filtrer par Écoles</button>
+                <button id="filter-best-per-year">Meilleure École par Année</button>
+                <label for="year-select">Changer d'année :</label>
+                <select id="year-select">
+                    <option value="2012">2012</option>
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015">2015</option>
+                </select>
             </div>
-            <svg id="graph-svg"></svg>
+            <div id="chart"></div>
         </section>
+        <!-- Tooltip pour les survols -->
+        <div id="tooltip"></div>
+        <!-- Modale pour les détails -->
+        <div id="modal">
+            <div id="modal-content">
+                <span id="close-btn">&times;</span>
+                <!-- Les détails seront injectés ici -->
+            </div>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>

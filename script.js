@@ -32,7 +32,6 @@ d3.csv(DATA_URL).then(data => {
     const yAxisGroup = svg.append('g');
 
     function update(data) {
-        // Ajuster dynamiquement la largeur des barres en fonction du nombre d'éléments
         width = Math.max(svgWidth - margin.left - margin.right, data.length * 50);
         x.range([0, width]);
         svg.select('svg').attr('width', width + margin.left + margin.right);
@@ -60,13 +59,19 @@ d3.csv(DATA_URL).then(data => {
             .attr('fill', (d, i) => d3.interpolateCool(i / data.length))
             .merge(bars)
             .on('click', function (event, d) {
-                showDetails(d); // Afficher le popup au clic
+                showDetails(d);
             })
             .on('mouseover', function () {
-                d3.select(this).transition().duration(200).attr('fill', 'orange');
+                d3.select(this)
+                    .transition()
+                    .duration(200)
+                    .attr('fill', 'orange');
             })
             .on('mouseout', function (event, d, i) {
-                d3.select(this).transition().duration(200).attr('fill', (d, i) => d3.interpolateCool(i / data.length));
+                d3.select(this)
+                    .transition()
+                    .duration(200)
+                    .attr('fill', (d, i) => d3.interpolateCool(i / data.length));
             })
             .transition()
             .duration(1000)
@@ -81,10 +86,10 @@ d3.csv(DATA_URL).then(data => {
 
     function showDetails(d) {
         const modal = d3.select('#modal');
-        const modalContent = d3.select('#modal-content');
+        const modalDetails = d3.select('#modal-details');
 
-        modal.style('display', 'block');
-        modalContent.html(`
+        modal.style('display', 'flex'); // Afficher la modale
+        modalDetails.html(`
             <h3>Détails</h3>
             <p><strong>Nom:</strong> ${d.institution}</p>
             <p><strong>Pays:</strong> ${d.country}</p>
@@ -95,14 +100,19 @@ d3.csv(DATA_URL).then(data => {
     }
 
     function closeModal() {
-        d3.select('#modal').style('display', 'none');
+        d3.select('#modal').style('display', 'none'); // Cacher la modale
     }
 
+    // Attachez l'événement au bouton de fermeture
+    d3.select('#close-btn').on('click', closeModal);
+
+    // Fermer en cliquant en dehors de la fenêtre modale
     d3.select('#modal').on('click', function (event) {
         if (event.target.id === 'modal') {
             closeModal();
         }
     });
+
 
     d3.select('#filter-schools').on('click', () => {
         activeFilter = 'schools';

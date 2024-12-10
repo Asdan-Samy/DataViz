@@ -118,7 +118,8 @@ h1 {
     pointer-events: none;
 }
 
-#modal {
+/* Modale */
+.page-graphique #modal {
     display: none;
     position: fixed;
     top: 0;
@@ -127,21 +128,23 @@ h1 {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     z-index: 1000;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#modal-content {
+.page-graphique #modal-content {
     background: white;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: left;
     width: 400px;
-    max-width: 80%;
+    max-width: 90%;
     position: relative;
 }
 
-#close-btn {
+.page-graphique #close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -151,7 +154,7 @@ h1 {
     color: #333;
 }
 
-#close-btn:hover {
+.page-graphique #close-btn:hover {
     color: red;
 }
 

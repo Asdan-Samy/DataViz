@@ -1,5 +1,15 @@
+/* === Importer la police SeoulNamsan CBL et Sevillana === */
+@font-face {
+    font-family: 'SeoulNamsan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff');
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+/* === Styles Globaux === */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'SeoulNamsan', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: rgb(100, 31, 156);
@@ -13,19 +23,12 @@ header {
     padding: 25px;
 }
 
-.texttop {
-    margin-left: 75%;
-    display: flex;
-    justify-content: space-around;	    
-}
-
 header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: space-around;
-    margin-left: 75%;
 }
 
 header nav ul li {
@@ -35,6 +38,12 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ddd;
 }
 
 main {
@@ -44,11 +53,8 @@ main {
 
 h1 {
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding-top: 50px;
-    padding-left: 450px;
-    padding-right: 450px;
-    padding-bottom: 75px;
+    font-size: 32px;
+    padding: 50px 450px 75px;
 }
 
 .mention {
@@ -60,62 +66,94 @@ h1 {
     display: inline-block;
     margin: 20px 0;
     padding: 10px 20px;
-    background: #007BFF;
+    background: #653A89;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-#filters {
+.btn:hover {
+    background-color: #3F2356;
+}
+
+/* === Styles Spécifiques à la Page Graphique === */
+.page-graphique #filters {
     margin-bottom: 20px;
     text-align: center;
 }
 
-#filters button,
-#filters select {
+.page-graphique #filters button,
+.page-graphique #filters select {
     margin: 5px;
     padding: 10px;
     cursor: pointer;
+    background: #653A89;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'SeoulNamsan', Arial, sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-#chart {
+.page-graphique #filters button:hover,
+.page-graphique #filters select:hover {
+    background-color: #3F2356;
+}
+
+/* === Section du Graphique === */
+.page-graphique #chart {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    background-color: white;
+    /* Fond pour le graphique */
+    border: 1px solid #ccc;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* pour le conteneur */
 }
 
-.bar {
-    stroke: #333; /* Contour des barres */
+
+.page-graphique .bar {
+    stroke: #333;
     stroke-width: 1px;
-    transition: transform 0.3s ease-in-out;
+    transition: fill 0.3s ease-in-out;
 }
 
-.bar:hover {
-    transform: scale(1.05);
+.page-graphique .bar:hover {
+    fill: orange;
     cursor: pointer;
 }
 
-.axis text {
+.page-graphique .axis text {
     font-size: 14px;
     fill: #444;
 }
 
-.axis path,
-.axis line {
+.page-graphique .axis path,
+.page-graphique .axis line {
     stroke: #888;
     stroke-width: 1;
 }
 
-#tooltip {
+.page-graphique #tooltip {
     display: none;
     position: absolute;
     background: rgba(0, 0, 0, 0.8);
     color: white;
+    font-family: 'SeoulNamsan', Arial, sans-serif;
     padding: 10px;
     border-radius: 5px;
     font-size: 12px;
     pointer-events: none;
+    z-index: 100;
 }
 
 /* Modale */
@@ -158,31 +196,77 @@ h1 {
     color: red;
 }
 
-.alignLeft {
-    float: left;
-    margin-left: 25px;
+/* === Sections alignées === */
+/* Boîtes uniformisées pour toutes les sections */
+.section-box {
+    background-color: #4A2870;
+    /*  pour le fond */
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
 }
 
-.alignRightabout {
-    float: right;
-    margin-right: 10%;
+.section-box h2 {
+    color: #00BFFF;
+    /* pour le titre */
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+    text-align: center;
 }
 
-.alignLeftabout {
-    float: left;
-    margin-left: 150px;
+.section-box h3 {
+    color: #FFD700;
+    /*pour les sous-titres */
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
-.mentionlegal {
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    padding-bottom: 100px;
+.section-box p,
+.section-box ul {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 10px 0;
 }
 
-svg {
-    width: 100%;
-    height: 400px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+.section-box ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.section-box a {
+    color: #FFD700;
+    /* pour les liens */
+    text-decoration: none;
+}
+
+.section-box a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-box {
+        padding: 15px;
+    }
+
+    .section-box h2 {
+        font-size: 20px;
+    }
+
+    .section-box h3 {
+        font-size: 16px;
+    }
+}
+
+/* Partie Citation*/
+.citation-sevillana {
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    font-style: normal;
 }

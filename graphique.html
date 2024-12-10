@@ -4,22 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphique Interactif</title>
+    <title>Classement Universités</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
-<body>
+<body class="page-graphique">
     <header>
         <nav>
-            <img class="alignLeft" src="miniLogo.png">
+            <img class="alignLeft" src="miniLogo.png" alt="Logo">
             <ul>
-                <li><a href="index.html"> - Accueil</a></li>
-                <li><a href="graphique.html"> - Graphique</a></li>
-                <li><a href="mentions.html"> - Mentions légales</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="graphique.html">Graphique</a></li>
+                <li><a href="mentions.html">Mentions légales</a></li>
             </ul>
         </nav>
-        <h1>Classement des Universités</h1>
     </header>
     <main>
         <section>
@@ -36,13 +35,11 @@
             </div>
             <div id="chart"></div>
         </section>
-        <!-- Tooltip pour les survols -->
         <div id="tooltip"></div>
-        <!-- Modale pour les détails -->
         <div id="modal">
             <div id="modal-content">
-                <span id="close-btn">&times;</span>
-                <!-- Les détails seront injectés ici -->
+                <button id="close-btn">&times;</button>
+                <div id="modal-details"></div>
             </div>
         </div>
     </main>

@@ -76,6 +76,22 @@ h1 {
 .btn:hover {
     background-color: #3F2356;
 }
+.texte-dataviz {
+    width: 100%; 
+    padding: 20px; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+    color: white; 
+    text-align: justify; 
+    line-height: 1.8; 
+}
+
+.texte-dataviz h1 {
+    font-size: 24px; /* Taille ajustée pour les titres */
+    margin-bottom: 20px; /* Espacement entre les blocs */
+    padding: 10px 0; /* Espacement interne des titres */
+}
+
 
 /* === Styles Spécifiques à la Page Graphique === */
 .page-graphique #filters {
@@ -264,9 +280,26 @@ h1 {
     }
 }
 
-/* Partie Citation*/
+/* Partie Citation */
 .citation-sevillana {
     font-family: "Sevillana", cursive;
     font-weight: 400;
     font-style: normal;
+    width: 100%; 
+    text-align: center; 
+    display: block; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box;
+    font-size: 40px; /* Taille de police */
+    line-height: 1.8; 
+    color: white; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .citation-sevillana {
+        font-size: 18px; 
+        padding: 15px; 
+    }
 }

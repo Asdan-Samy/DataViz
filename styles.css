@@ -76,20 +76,78 @@ h1 {
 .btn:hover {
     background-color: #3F2356;
 }
+
 .texte-dataviz {
-    width: 100%; 
-    padding: 20px; 
-    margin: 0 auto; 
-    box-sizing: border-box; 
-    color: white; 
-    text-align: justify; 
-    line-height: 1.8; 
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    color: white;
+    text-align: justify;
+    line-height: 1.8;
 }
 
 .texte-dataviz h1 {
-    font-size: 24px; /* Taille ajustée pour les titres */
-    margin-bottom: 20px; /* Espacement entre les blocs */
-    padding: 10px 0; /* Espacement interne des titres */
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    
+}
+
+#filters {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--color-light-gray, #f5f5f5);
+    border: 2px solid var(--color-dark, #333333);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#filters button {
+    padding: 10px 20px;
+    background-color: var(--color-dark, #333333);
+    color: var(--color-white, #ffffff);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#filters button:hover {
+    background-color: var(--color-accent, #555555);
+    transform: scale(1.05);
+}
+
+#filters button:focus {
+    outline: 2px solid var(--color-accent, #555555);
+    outline-offset: 2px;
+}
+
+#filters label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#filters select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid var(--color-dark, #333333);
+    border-radius: 5px;
+    background-color: var(--color-white, #ffffff);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+#filters select:focus {
+    border-color: var(--color-accent, #555555);
 }
 
 
@@ -125,15 +183,10 @@ h1 {
     align-items: center;
     margin-top: 20px;
     background-color: white;
-    /* Fond pour le graphique */
     border: 1px solid #ccc;
-
     padding: 20px;
-
     border-radius: 8px;
-
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* pour le conteneur */
 }
 
 
@@ -182,7 +235,6 @@ h1 {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     z-index: 1000;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -213,7 +265,7 @@ h1 {
 }
 
 /* === Sections alignées === */
-/* Boîtes uniformisées pour toutes les sections */
+
 .section-box {
     background-color: #4A2870;
     /*  pour le fond */
@@ -285,21 +337,22 @@ h1 {
     font-family: "Sevillana", cursive;
     font-weight: 400;
     font-style: normal;
-    width: 100%; 
-    text-align: center; 
-    display: block; 
-    margin: 0 auto; 
-    padding: 20px; 
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
     box-sizing: border-box;
-    font-size: 40px; /* Taille de police */
-    line-height: 1.8; 
-    color: white; 
+    font-size: 40px;
+    /* Taille de police */
+    line-height: 1.8;
+    color: white;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .citation-sevillana {
-        font-size: 18px; 
-        padding: 15px; 
+        font-size: 18px;
+        padding: 15px;
     }
 }
